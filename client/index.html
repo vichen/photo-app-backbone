@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
+     below them until after the scripts load-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+
+    <script src="data/data.js"></script>
+
+    <script src="models/AppModel.js"></script>
+    <script src="models/PhotoModel.js"></script>
+    <script src="collections/Photos.js"></script>
+    <script src="collections/TitleList.js"></script>
+
+    <script src="views/AppView.js"></script>
+    <script src="views/PhotoView.js"></script>
+    <script src="views/TitleEntryView.js"></script>
+    <script src="views/TitlesView.js"></script>
+
+
+    <script>
+      $(function() {
+        // set up model objects
+        var album = new Photos(photoData);
+        var app = new AppModel({album: album});
+
+        // build a view for the top level of the whole app
+        var appView = new AppView({model: app});
+
+        // put the view onto the screen
+        $('body').append(appView.render());
+      });
+    </script>
+  </body>
+</html>
