@@ -6,5 +6,6 @@ var AppModel = Backbone.Model.extend({
     params.album.on('viewPhoto', function(photo) {
       this.set('currentPhoto', photo);
     }, this);
+
   }
 });

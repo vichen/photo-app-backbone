@@ -5,8 +5,6 @@ var TitlesView = Backbone.View.extend({
     this.render();
   },
 
-  // template: _.template('<td>(<%= title %>)</td>'),
-
   render: function() {
     this.$el.children().detach();
 
