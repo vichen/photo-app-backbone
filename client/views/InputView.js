@@ -6,7 +6,7 @@ var InputView = Backbone.View.extend({
     this.titleInputView = new TitleInputView();
     this.submitButtonView = new SubmitButtonView();
 
-    this.model.on('addPhoto')
+    // this.model.on('addPhoto')
     this.render();
   },
 
