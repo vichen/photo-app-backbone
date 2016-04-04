@@ -6,9 +6,4 @@ var PhotoModel = Backbone.Model.extend({
   viewPhoto: function() {
     this.trigger('viewPhoto', this);
   },
-
-  // changeRating: function() {
-    
-  //   this.trigger('changeRating', this);
-  // }
 });

@@ -19,7 +19,9 @@ var PhotoView = Backbone.View.extend({
 
   render: function() {
     if (!this.model.attributes.url) { return; }
-    return this.$el.html([this.template(this.model.attributes),
-      '<span>Change Rating: </span>', new DropdownView({model: this.model}).render()]);
+    return this.$el.html([
+      this.template(this.model.attributes),
+      '<span>Change Rating: </span>', 
+      new DropdownView({model: this.model}).render()]);
   }
 });
